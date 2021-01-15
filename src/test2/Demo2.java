@@ -16,7 +16,7 @@ public class Demo2 {
                 arr1[n++]=arr[i];
             }
         }
-        System.out.println("Ö»³öÏÖÒ»´ÎµÄÊı×ÖÊÇ"+arr1[0]+"ºÍ"+arr1[1]);
+        System.out.println("åªå‡ºç°ä¸€æ¬¡çš„æ•°å­—æ˜¯"+arr1[0]+"å’Œ"+arr1[1]);
     }
     }
 
