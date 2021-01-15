@@ -11,7 +11,7 @@ public class Demo3 {
         StringBuilder code=new StringBuilder(6);
         Scanner sc=new Scanner(System.in);
         String key=sc.next();
-        if(key.equals("GET")){
+        if(key.equals("GEET")){
         for(int i=0;i<6;i++)
         {
             char ch=str.charAt(new Random().nextInt(str.length()));
