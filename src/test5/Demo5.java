@@ -11,7 +11,7 @@ public class Demo5 {
             }
         }
         for (int i=0;i<12;i++) {
-            System.out.println(arr[2]);
+            System.out.println(arr[i]);
         }
     }
 }
