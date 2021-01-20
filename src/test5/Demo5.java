@@ -10,6 +10,7 @@ public class Demo5 {
                 n++;
             }
         }
+        System.out.println("30以内从大到小的前12个奇数为：");
         for (int i=0;i<12;i++) {
             System.out.println(arr[i]);
         }
