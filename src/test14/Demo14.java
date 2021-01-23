@@ -1,10 +1,12 @@
 package test14;
 
 import java.io.File;
+import java.util.Scanner;
 
 public class Demo14 {
     public static void main(String[] args) {
-        String path = "C:\\Users\\lenovo\\Desktop";
+        Scanner sc = new Scanner(System.in);
+        String path = sc.nextLine();
         File file = new File(path);
         func(file);
     }
