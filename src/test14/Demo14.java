@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Demo14 {
     public static void main(String[] args) {
-        String path = "C:\\Users\\lenovo\\Desktop\\×ÀÃæ";
+        String path = "C:\\Users\\lenovo\\Desktop";
         File file = new File(path);
         func(file);
     }
