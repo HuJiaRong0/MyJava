@@ -13,7 +13,7 @@ public class Demo13 {
             int result = num1/num2;
             System.out.println(result);
         } catch(Exception e){
-            System.out.println("³ıÊı²»ÄÜÎª0");
+            System.out.println("é™¤æ•°ä¸èƒ½ä¸º0");
         }
     }
 }
