@@ -16,7 +16,7 @@ public class Demo15 {
         count++;
         str = str.substring(str.indexOf(word) + word.length());
     }
-        System.out.println(word+"ÔÚÎÄÖĞ³öÏÖÁË"+count+"´Î");
+        System.out.println(word+"åœ¨æ–‡ä¸­å‡ºç°äº†"+count+"æ¬¡");
     }
         public static String Read(File file){
             StringBuilder result = new StringBuilder();
