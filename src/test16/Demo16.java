@@ -9,8 +9,8 @@ public class Demo16 {
         String[] arr = temp.split(",");
         String code = arr[0];
         int count = Integer.parseInt(arr[1]);
-        double price = Order.getOrderAmount(code, count);
-        System.out.println(price);
+        double Price = Order.getOrderAmount(code, count);
+        System.out.println(Price);
     }
 }
 
