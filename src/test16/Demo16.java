@@ -4,35 +4,80 @@ import java.util.Scanner;
 
 public class Demo16 {
     public static void main(String[] args) {
+
+        Item item = new Item();
+        String[] ItemCode = new String[]{"C_101", "C_102"};
+        String[] ItemName = new String[]{" HUAWEI Mate30 Pro", "XIAOMI 10 Pro"};
+        double[] UnitPrice = new double[]{5000.00, 4699.00};
+        item.setItemCode(ItemCode);
+        item.setItemName(ItemName);
+        item.setUnitPrice(UnitPrice);
+
+
         Scanner sc = new Scanner(System.in);
         String temp = sc.next();
-        String[] arr = temp.split(",");
-        String code = arr[0];
-        int count = Integer.parseInt(arr[1]);
-        double Price = Order.getOrderAmount(code, count);
-        System.out.println(Price);
+        String[] ss = temp.split(",");
+        String serial = ss[0];
+        int number = Integer.parseInt(ss[1]);
+
+        double total = Order.getOrderAmount(serial, number,item);
+        System.out.println(total);
+
+
+
     }
 }
 
 class Item {
-    String[] ItemCode = {"C_101", "C_102"};
-    String[] ItemName = {" HUAWEI Mate30 Pro", "XIAOMI 10 Pro"};
-    double[] UnitPrice ={5000.00, 4699.00};
+    String[] ItemCode;
+    String[] ItemName;
+    double[] UnitPrice;
+
+    public void setItemCode(String[] ItemCode) {
+        this.ItemCode = ItemCode;
+    }
+
+    public void setItemName(String[] ItemName) {
+        this.ItemName = ItemName;
+    }
+
+    public void setUnitPrice(double[] UnitPrice) {
+        this.UnitPrice = UnitPrice;
+    }
+
+    public String[] getItemName() {
+        System.out.println(ItemName);
+        return ItemName;
+    }
+
+    public String[] getItemCode() {
+        System.out.println(ItemCode);
+        return ItemCode;
+    }
+
+    public double[] getUnitPrice() {
+        System.out.println(UnitPrice);
+        return UnitPrice;
+    }
+
+
 }
 
 
-class Order extends Item {
+class Order extends Item  {
 
-    public static double getOrderAmount(String itemCode, int itemCount) {
-        Item item = new Item();
-        String[] ItemCode = item.ItemCode;
-        double[] UnitPrice = item.UnitPrice;
-        double price = 0;
+    public static double getOrderAmount(String serial, int number,Item item) {
+        Item test = item;
+        String[] ItemCode = test.ItemCode;
+        String[] ItemName = test.ItemName;
+        double[] UnitPrice = test.UnitPrice;
+        double sum = 0;
         for (int i = 0; i < ItemCode.length; i++) {
-            if (ItemCode[i].equals(itemCode)) {
-                price = itemCount * UnitPrice[i];
+            if (ItemCode[i].equals(serial)) {
+                sum = number * UnitPrice[i];
             }
         }
-        return price;
+        return sum;
     }
+
 }
